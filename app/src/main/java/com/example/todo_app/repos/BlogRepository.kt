@@ -17,7 +17,7 @@ class BlogRepository(
             try {
                 val apiCategory = category.toNewsApiCategory()
 
-                // Using top-headlines (NO SEARCH QUERY)
+
                 val response = apiService.getTopHeadlines(
                     apiKey = apiKey,
                     country = "us",

@@ -18,7 +18,7 @@ interface TodoDao {
     @Query("SELECT * FROM Todos WHERE category = :category ORDER BY createdAt DESC")
     fun getTodosByCategory(category: TodoCategory): Flow<List<Todo>>
 
-    @Insert(onConflict = OnConflictStrategy.Companion.REPLACE)
+    @Insert(onConflict = OnConflictStrategy.Companion.ABORT)
     suspend fun insert(todo: Todo)
 
     @Update

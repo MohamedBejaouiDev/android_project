@@ -10,14 +10,14 @@ import com.example.todo_app.vm.BlogViewModel
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-// Retrofit Setup Object
-object BlogModule {
-    private const val BASE_URL = "https://newsapi.org/v2/" // Reverted to HTTPS
 
+object BlogModule {
+    private const val BASE_URL = "https://newsapi.org/v2/"
     private val retrofit = Retrofit.Builder()
         .baseUrl(BASE_URL)
         .addConverterFactory(GsonConverterFactory.create())
         .build()
+
 
     private val blogApiService: BlogApiService = retrofit.create(BlogApiService::class.java)
 

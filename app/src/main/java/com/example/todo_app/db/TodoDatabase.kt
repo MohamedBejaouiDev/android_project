@@ -9,7 +9,7 @@ import com.example.todo_app.data.Todo
 
 @Database(
     entities = [Todo::class],
-    version = 1, // Current code version is 1
+    version = 1,
     exportSchema = false
 )
 abstract class TodoDatabase : RoomDatabase() {
